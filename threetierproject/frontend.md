@@ -19,7 +19,7 @@ Make sure the SG allows or opened port for the HTTP communication.
     `curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip`
     
     `cd /usr/share/nginx/html`
-    
+
     `unzip /tmp/frontend.zip`
 
 Check if new content of the app is being displayed.
@@ -30,6 +30,7 @@ Check if new content of the app is being displayed.
 
 **Code to update**
 
+```markdown
 nginx configuration title=/etc/nginx/default.d/expense.conf 
 proxy_http_version 1.1;
 
@@ -40,7 +41,8 @@ location /health {
   access_log off;
 }
 
-> [localhost is the backend server private ip]
+```
+[localhost is the backend server private ip]
 
 # Post reverse proxy config, restart Nginx so that the changes can be applied.
 
