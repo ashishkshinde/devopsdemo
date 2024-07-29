@@ -1,3 +1,4 @@
+---
 name: Frontend App
 hosts: localhost 
 become: yes
