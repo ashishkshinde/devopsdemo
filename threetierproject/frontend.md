@@ -1,9 +1,9 @@
 Creating frontend command line reference
 
-# Install web server nginx & dnf is a package manager for rhel.
+# Install web server nginx.
 
 **shell commands**
-1. To install nginx '`dnf install nginx -y`'
+1. To install nginx '`dnf install nginx -y`' **(dnf is a package manager for rhel)**
 2. To enable nginx '`systemctl enable nginx`'
 3. To start nginx '`systemctl start nginx`'
 
@@ -15,9 +15,11 @@ Make sure the SG allows or opened port for the HTTP communication.
 1. Remove default content of nginx
     `rm -rf /usr/share/nginx/html/*`
 2. Download the content to temp folder and install it to html folder from where the default contect was deleted.
+
     `curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/expense-frontend-v2.zip`
     
     `cd /usr/share/nginx/html`
+    
     `unzip /tmp/frontend.zip`
 
 Check if new content of the app is being displayed.
