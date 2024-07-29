@@ -5,7 +5,8 @@ Creating frontend command line reference
 **shell commands**
 1. To install nginx 
 ```shell 
-dnf install nginx -y (dnf is a package manager for rhel)
+dnf install nginx -y 
+# dnf is a package manager for rhel
 ``` 
 
 
