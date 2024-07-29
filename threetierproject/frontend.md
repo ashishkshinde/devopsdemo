@@ -3,9 +3,13 @@ Creating frontend command line reference
 # Install web server nginx.
 
 **shell commands**
-1. To install nginx '`dnf install nginx -y`' **(dnf is a package manager for rhel)**
-2. To enable nginx '`systemctl enable nginx`'
-3. To start nginx '`systemctl start nginx`'
+1. To install nginx 
+```shell 
+dnf install nginx -y
+``` 
+**(dnf is a package manager for rhel)**
+2. To enable nginx systemctl enable nginx
+3. To start nginx systemctl start nginx
 
 Try to access web server to confirm installation by using public IP of the aws instance where the server is installed.
 Make sure the SG allows or opened port for the HTTP communication.
