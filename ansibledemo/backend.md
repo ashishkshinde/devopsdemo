@@ -45,5 +45,5 @@ unzip /tmp/backend.zip
 ```shell
 cd /app 
 npm install 
-```
 # npm manages downloads of dependencies of your project.
+```
