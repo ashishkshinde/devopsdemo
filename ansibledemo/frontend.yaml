@@ -22,3 +22,15 @@
 
     - name: unzip it to html folder
       ansible.builtin.shell: unzip /tmp/frontend.zip -d /usr/share/nginx/html
+
+    - name: copy the expense conf file
+      ansible.builtin.copy:
+        src: expense.conf
+        dest: /etc/nginx/default.d/expense.conf
+
+    - name: restart nginx
+      ansible.builtin.systemd_service:
+        name: nginx
+        state: restared
+        enabled: true
+    
