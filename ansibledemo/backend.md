@@ -47,3 +47,39 @@ cd /app
 npm install 
 # npm manages downloads of dependencies of your project.
 ```
+
+Every global application comes with a SystemD service file which is useful for any application to run as a service in the background.
+Our backend app is a custom application so we need to create a SustemD file. This is also required for the systemctl to manage the custom application.
+
+Create file by using "vim /etc/systemd/system/backend.service" and update below config in the file:
+
+```shell
+[Unit]
+Description = Backend Service
+
+[Service]
+User=expense
+// highlight-start
+Environment=DB_HOST="<MYSQL-SERVER-IPADDRESS>"
+// highlight-end
+ExecStart=/bin/node /app/index.js
+SyslogIdentifier=backend
+
+[Install]
+WantedBy=multi-user.target
+```
+
+For systemd to detect the newly created service "backend" we need to load the systemd service and then start the new service. 
+
+```shell
+systemctl daemon-reload
+systemctl enable backend 
+systemctl start backend
+```
+We also need to load the schema so that the application can work properly. For this we need the sql client to be installed first.
+
+```shell
+dnf install mysql -y 
+mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pExpenseApp@1 < /app/schema/backend.sql 
+```
+
