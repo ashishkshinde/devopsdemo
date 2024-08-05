@@ -1,0 +1,13 @@
+[Unit]
+Description = Backend Service
+
+[Service]
+User=expense
+// highlight-start
+Environment=DB_HOST="<MYSQL-SERVER-IPADDRESS>"
+// highlight-end
+ExecStart=/bin/node /app/index.js
+SyslogIdentifier=backend
+
+[Install]
+WantedBy=multi-user.target
