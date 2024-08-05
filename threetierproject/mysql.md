@@ -1,4 +1,4 @@
-**Install mysql db**
+**Install mysql db server**
 
 ```shell   
     dnf install mysql-server -y
