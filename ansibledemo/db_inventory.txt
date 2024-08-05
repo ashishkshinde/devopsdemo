@@ -1,0 +1,6 @@
+[localhost]
+172.31.26.170
+
+[localhost:vars]
+ansible_user=ec2-user
+ansible_password=DevOps321
