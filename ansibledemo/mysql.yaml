@@ -21,6 +21,6 @@
     - name: change default password
       community.mysql.mysql_user:
         login_password: ''
-        new_password: ExpenseApp@1
+        password: ExpenseApp@1
         user: root
         login_host: localhost
