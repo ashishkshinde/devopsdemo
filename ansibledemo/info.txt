@@ -13,3 +13,5 @@ This file needs to save only with the extension as .txt or .ine for ansible to r
 Command to manage config of multiple hosts using ansible playbook is :
     ansible -i <inventory file> all <playbook file>
 
+Every global application comes with a SystemD service file which is useful for any application to run as a service in the background.
+Our backend app is a custom application so we need to create a SustemD file. This is also required for the systemctl to manage the custom application. 
