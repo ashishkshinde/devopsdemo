@@ -52,7 +52,7 @@
 
     - name: Install NodeJS
       ansible.builtin.dnf:
-        name: mysql
+        name: nodejs
         state: installed
 
     - name: load the schema
