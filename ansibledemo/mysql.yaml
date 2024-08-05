@@ -23,7 +23,8 @@
         name:
             - PyMySQL
             - cryptography
-        executable: pip3.9 
+        executable: pip3.9
+        state: present 
 
     - name: change default password
       community.mysql.mysql_user:
