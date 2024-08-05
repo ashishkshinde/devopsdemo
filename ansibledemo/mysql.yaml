@@ -1,6 +1,8 @@
 - name: MYSQL
   hosts: localhost 
   become: yes
+  vars:
+    ansible_python_interpreter: user/bin/python3
   
   tasks:
 
