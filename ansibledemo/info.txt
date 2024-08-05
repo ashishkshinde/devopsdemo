@@ -3,13 +3,13 @@ To install Ansible on RHEL Host :
     sudo pip3.11 install ansible
 
 To test the connectivity between master and slave device :
-    ansible-playbook -i <host-ip> -e ansible_user=<user_name> ansible_password=<pwd> -m ping
+    ansible -i <host-ip> -e ansible_user=<user_name> ansible_password=<pwd> -m ping
 
 Below command is used to manage config of a specific host :
-    ansible-playbook -i <host-ip> -e ansible_user=<user_name> ansible_password=<pwd> 
+    ansible -i <host-ip> -e ansible_user=<user_name> ansible_password=<pwd> 
 
 Common hosts can be managed using inventory file. Inventory file can be used to store the endpoint addresses as well as the UID & PWDs.
 This file needs to save only with the extension as .txt or .ine for ansible to recognize them.
 Command to manage config of multiple hosts using ansible playbook is :
-    ansible-playbook -i <inventory file> all
+    ansible -i <inventory file> all
 
