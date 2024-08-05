@@ -2,8 +2,7 @@
   hosts: localhost 
   become: yes
   vars:
-    ansible_python_interpreter: user/bin/python3
-  
+    ansible_python_interpreter: user/bin/python3.11
   tasks:
 
     - name: Install mysql server
