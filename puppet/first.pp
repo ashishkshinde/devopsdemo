@@ -1,9 +1,13 @@
 node default{
-  package { 'nginx':
+  package{'nginx':
     ensure => installed,
   }
+  package{'apache2'
+    ensure => installed,
+  }
+
   file{'/tmp/status.txt':
-    content => "nginx installed",
+    content => "nginx installed \n installed apache successfully\n",
     mode    => '0644',
   }
 }
